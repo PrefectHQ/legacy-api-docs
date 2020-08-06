@@ -13,7 +13,7 @@
 [build]
   base    = ""
   publish = "docs/.vuepress/dist"
-  command = 'export GIT_SHA=$COMMIT_REF && yarn docs:build'
+  command = 'export GIT_SHA=$COMMIT_REF && npm run docs:build'
 
 
 # redirect from /guide/core_concepts to /core/concepts
