@@ -8,7 +8,7 @@ footer: Copyright © 2018-present Prefect Technologies, Inc.
 <div class="hero">
     <div class="action">
         <button class="action-button">
-            <router-link to="https://docs.prefect.io/core/">
+            <router-link to="/api/0.9.8/">
                 Read the docs
             </router-link>
         </button>
