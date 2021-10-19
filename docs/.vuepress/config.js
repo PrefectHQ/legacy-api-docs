@@ -4,10 +4,11 @@ const sidebar81 = require('../api/0.8.1/sidebar')
 const sidebar98 = require('../api/0.9.8/sidebar')
 const sidebar107 = require('../api/0.10.7/sidebar')
 const sidebar115 = require('../api/0.11.5/sidebar')
+const sidebar126 = require('../api/0.12.6/sidebar')
 const glob = require('glob')
 
 // function for loading all MD files in a directory
-const getChildren = function(parent_path, dir) {
+const getChildren = function (parent_path, dir) {
   return glob
     .sync(parent_path + '/' + dir + '/**/*.md')
     .map(path => {
@@ -42,7 +43,7 @@ module.exports = {
     ["vuepress-plugin-code-copy", true],
     'vuepress-plugin-element-tabs',
     [
-    'vuepress-plugin-selected-text-popup',
+      'vuepress-plugin-selected-text-popup',
       {
         github: true,
         githubOwner: 'prefecthq',
@@ -68,6 +69,7 @@ module.exports = {
       {
         text: 'API Reference',
         items: [
+          { text: '0.12.6', link: '/api/0.12.6/' },
           { text: '0.11.5', link: '/api/0.11.5/' },
           { text: '0.10.7', link: '/api/0.10.7/' },
           { text: '0.9.8', link: '/api/0.9.8/' },
@@ -84,6 +86,7 @@ module.exports = {
       '/api/0.9.8/': sidebar98.sidebar,
       '/api/0.10.7/': sidebar107.sidebar,
       '/api/0.11.5/': sidebar115.sidebar,
+      '/api/0.12.6/': sidebar126.sidebar,
     }
   },
   extendMarkdown(md) {
