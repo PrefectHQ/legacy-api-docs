@@ -5,6 +5,7 @@ const sidebar98 = require('../api/0.9.8/sidebar')
 const sidebar107 = require('../api/0.10.7/sidebar')
 const sidebar115 = require('../api/0.11.5/sidebar')
 const sidebar126 = require('../api/0.12.6/sidebar')
+const sidebar1319 = require('../api/0.13.19/sidebar')
 const glob = require('glob')
 
 // function for loading all MD files in a directory
@@ -69,6 +70,7 @@ module.exports = {
       {
         text: 'API Reference',
         items: [
+          { text: '0.13.19', link: '/api/0.13.19/' },
           { text: '0.12.6', link: '/api/0.12.6/' },
           { text: '0.11.5', link: '/api/0.11.5/' },
           { text: '0.10.7', link: '/api/0.10.7/' },
@@ -87,6 +89,7 @@ module.exports = {
       '/api/0.10.7/': sidebar107.sidebar,
       '/api/0.11.5/': sidebar115.sidebar,
       '/api/0.12.6/': sidebar126.sidebar,
+      '/api/0.13.19/': sidebar1319.sidebar,
     }
   },
   extendMarkdown(md) {
