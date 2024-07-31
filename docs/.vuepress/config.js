@@ -28,11 +28,8 @@ module.exports = {
   title: 'Prefect Legacy API Documentation',
   description: "Don't Panic.",
   head: [
-    'link',
-    {
-      rel: 'icon',
-      href: '/favicon.ico'
-    }
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'robots', content: 'noindex' }]
   ],
   plugins: [
     [
